@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #161623;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffc107), to(#e91e63));
+  background: linear-gradient(#ffc107, #e91e63);
+  -webkit-transform: translate(-200px, -150px);
+          transform: translate(-200px, -150px);
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2196f3), to(#31ff38));
+  background: linear-gradient(#2196f3, #31ff38);
+  -webkit-transform: translate(200px, 150px);
+          transform: translate(200px, 150px);
+}
+
+.box {
+  position: relative;
+  z-index: 100;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dycalendar {
+  width: 100%;
+  padding: 20px;
+}
+
+#dycalendar table {
+  width: 100%;
+  margin-top: 50px;
+  border-spacing: 7px;
+}
+
+#dycalendar table tr:nth-child(1) td {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+#dycalendar table tr:nth-child(1) td:hover {
+  background: #fff;
+  color: #111;
+}
+
+#dycalendar table td {
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#dycalendar table td:hover {
+  background: #fff;
+  color: #111  !important;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+  background: #fff;
+  color: #111  !important;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  left: 7px;
+  width: 45px;
+  height: 40px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 45px;
+  height: 40px;
+  right: 7px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+  position: relative;
+  top: 5px;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */
